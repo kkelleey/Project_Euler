@@ -1,0 +1,22 @@
+# Find the first Fibonacci number that is 1000 digits
+
+# We want to find n such that n > 10**1000
+
+one_thousand_digits = 10**1000
+
+third_to_last = 1
+second_to_last = 1
+
+n = 3
+
+fibonacci_number = 2
+
+while fibonacci_number < one_thousand_digits:
+    old_fibonacci = fibonacci_number
+    fibonacci_number = third_to_last + second_to+last
+    third_to_last = second_to_last
+    second_to_last = old_fibonacci
+    n += 1
+    print "Fibonacci number ",n" is ",fibonacci_number
+
+print "The answer is ",n
