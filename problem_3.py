@@ -1,3 +1,14 @@
+# We want to find the largest prime factor of n = 600851475143
+#Theory:
+# We know that n has a unique prime power decomposition: 
+# prime_1 * prime_2 * prime_3 *...*prime_(k-1)* prime_k = n
+# Let prime_1 <= prime_2 <= ... <= prime_k
+# Let m = n / (prime_1 * prime_2 * ...* prime _j)
+# i.e. the remainder once j primes are factored out
+# We want to factor primes out of n until m = prime_k
+
+
+
 n = 600851475143
 
 
