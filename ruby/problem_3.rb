@@ -1,3 +1,5 @@
+#Problem: What is the largest prime factor of the number 600851475143 ?
+
 number = 600851475143
 upper_bound = Math.sqrt(number)
 prime_factors = []

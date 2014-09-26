@@ -1,3 +1,5 @@
+# What is the sum of the digits of the number 21000?
+
 n = 1000
 string = (2**n).to_s
 

@@ -1,3 +1,6 @@
+#y considering the terms in the Fibonacci sequence whose values do not exceed four million, 
+#find the sum of the even-valued terms.
+
 last_num = 1
 second_to_last_num = 1
 sum = 0

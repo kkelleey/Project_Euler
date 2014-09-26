@@ -1,5 +1,8 @@
 # Problem 9
 
+#There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+# Find the product abc
+
 # We want to find a and b such that a**2 + b**2 = c**2
 # and a + b + c = 1000
 
