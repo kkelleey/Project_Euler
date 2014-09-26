@@ -1,12 +1,14 @@
 import time
+import math
 
 start = time.time()
 
 def d(n):
-    sum_of_divisors = 0
-    for i in range(1,n):
+    sum_of_divisors = 1
+    for i in range(2,int(math.sqrt(n)) + 1):
         if n%i == 0:
-            sum_of_divisors += i 
+            sum_of_divisors += i
+            sum_of_divisors += n /i
     return sum_of_divisors
 
 total = 0
