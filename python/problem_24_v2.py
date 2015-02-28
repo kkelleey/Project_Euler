@@ -7,22 +7,21 @@ def factorial(n):
 		product *= i
 	return product
 
-def find_permutation(term_count, remaining_elements, result):
+def add_next_digit(term_count, remaining_elements, result):
 	if len(remaining_elements) == 0:
-		print result
-		return result
+		print "The ", term, "th permutation is", result
+		return
 	else:
 		new_permutation_count = factorial(len(remaining_elements) - 1)
 		for element in remaining_elements:
 			if (term_count + new_permutation_count) >= term:
 				result += str(element)
 				remaining_elements.remove(element)
-				find_permutation(term_count, remaining_elements, result)
+				add_next_digit(term_count, remaining_elements, result)
 			else:
 				term_count += new_permutation_count
 
 if term > factorial(len(elements)):
 	print "Term number exceeds number of possible permutations"
-# print "The ", term, "th permutation of", elements, "is", find_permutation(0, elements, [])
-find_permutation(0,elements, '')
+add_next_digit(0,elements, '')
 
