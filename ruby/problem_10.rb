@@ -1,14 +1,15 @@
-# Find the sum of all the primes below two million
+$LOAD_PATH << '.'
+require 'lib/prime'
 
-require 'prime'
 n = 2000000
+primes = []
 sum = 0
 
-
-Prime.each do |prime|
-	prime < n ? sum += prime : break
+2.upto(n) do |k|
+  if PrimeModule.is_prime?(k, primes)
+    primes << k
+    sum += k
+  end
 end
 
 puts sum
-
-
