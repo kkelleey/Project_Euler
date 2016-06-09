@@ -13,7 +13,7 @@ class PythagoreanTriple
       b = a + 1
       until b == (1000 - a) / 2
         c = 1000 - b - a
-        return [a,b,c] if pythagorean_triple?(a, b, c)
+        return [a, b, c] if pythagorean_triple?(a, b, c)
         b += 1
       end
     end
