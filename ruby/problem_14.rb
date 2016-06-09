@@ -1,12 +1,10 @@
-lengths = {}
-for i in 1..1000000
-	k = i
-	count = 0
-	until k == 1
-		k = k % 2 == 0 ? k / 2 : 3 * k + 1
-		count += 1 
-	end
-	lengths[i] = count
+class Fixnum
+  def collatz_sequence(sequence = [])
+    next_number = self.even? ? self / 2 : 3 * self + 1
+    sequence << self
+    return sequence if self == 1
+    next_number.collatz_sequence(sequence)
+  end
 end
 
-puts lengths.sort_by {|i, length| length}.last
+puts (1..1_000_000).max_by { |n| n.collatz_sequence.length }
