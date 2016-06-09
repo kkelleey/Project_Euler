@@ -6,4 +6,10 @@ class Bignum
   end
 end
 
+class Fixnum
+  def digits
+    to_s.chars.map(&:to_i)
+  end
+end
+
 puts (2**1000).digits.reduce(:+)
