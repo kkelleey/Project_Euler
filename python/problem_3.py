@@ -1,18 +1,12 @@
-#Problem: What is the largest prime factor of the number 600851475143 ?
+# Problem: What is the largest prime factor of the number 600851475143 ? 
 
+def largest_prime_factor(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n
 
-n = 600851475143
-upper_bound = int(n**0.5) #squre root
-prime_factors = []
-
-for i in range(2,upper_bound):
-    if n % i == 0:
-        is_prime = True
-        for prime in prime_factors:
-            if i % prime == 0:
-                prime = False
-                break
-        if is_prime:
-            prime_factors.append(i)
-
-print prime_factors[-1]
+print largest_prime_factor(600851475143)
